@@ -11,8 +11,8 @@ void main() async {
   print("open library");
 
   // dynamicLibrary;
-  Pointer<Utf8> data_native = "Hello".toNativeUtf8();
-  dynamicLibrary.lookupFunction<PrintNative, PrintDart>("print").call(data_native);
-  malloc.free(data_native);
+  Pointer<Utf8> dataNative = "Hello".toNativeUtf8();
+  dynamicLibrary.lookupFunction<PrintNative, PrintDart>("print").call(dataNative);
+  malloc.free(dataNative);
   print("done");
 }
